@@ -1,0 +1,112 @@
+[
+  {
+    "id": "1",
+    "title": "Stranger Things",
+    "description": "A group of young friends witness supernatural forces and secret government exploits in their small town.",
+    "year": 2016,
+    "duration": "50m",
+    "rating": 8.7,
+    "genres": ["Sci-Fi", "Horror", "Drama"],
+    "image": "/assets/stranger-things.jpg",
+    "banner": "/assets/stranger-things-banner.jpg"
+  },
+  {
+    "id": "2",
+    "title": "The Crown",
+    "description": "Follows the political rivalries and romance of Queen Elizabeth II's reign.",
+    "year": 2016,
+    "duration": "1h 0m",
+    "rating": 8.6,
+    "genres": ["Drama", "Biography", "History"],
+    "image": "/assets/the-crown.jpg",
+    "banner": "/assets/the-crown-banner.jpg"
+  },
+  {
+    "id": "3",
+    "title": "WandaVision",
+    "description": "Blends the style of classic sitcoms with the MCU, in which Wanda Maximoff and Vision begin to suspect things are not as they seem.",
+    "year": 2021,
+    "duration": "35m",
+    "rating": 8.0,
+    "genres": ["Sci-Fi", "Comedy", "Drama"],
+    "image": "/assets/wandavision.jpg",
+    "banner": "/assets/wandavision-banner.jpg"
+  },
+  {
+    "id": "4",
+    "title": "The Marvelous Mrs. Maisel",
+    "description": "A housewife in 1958 decides to become a stand-up comic.",
+    "year": 2017,
+    "duration": "50m",
+    "rating": 8.7,
+    "genres": ["Comedy", "Drama"],
+    "image": "/assets/mrs-maisel.jpg",
+    "banner": "/assets/mrs-maisel-banner.jpg"
+  },
+  {
+    "id": "5",
+    "title": "Breaking Bad",
+    "description": "A high school chemistry teacher turned methamphetamine producer navigates the dangers of the criminal underworld.",
+    "year": 2008,
+    "duration": "47m",
+    "rating": 9.5,
+    "genres": ["Crime", "Drama", "Thriller"],
+    "image": "/assets/breaking-bad.jpg",
+    "banner": "/assets/breaking-bad-banner.jpg"
+  },
+  {
+    "id": "6",
+    "title": "The Mandalorian",
+    "description": "A lone bounty hunter in the outer reaches of the galaxy protects a mysterious child.",
+    "year": 2019,
+    "duration": "40m",
+    "rating": 8.8,
+    "genres": ["Action", "Adventure", "Sci-Fi"],
+    "image": "/assets/mandalorian.jpg",
+    "banner": "/assets/mandalorian-banner.jpg"
+  },
+  {
+    "id": "7",
+    "title": "Money Heist",
+    "description": "A criminal mastermind plans the biggest heist in recorded history.",
+    "year": 2017,
+    "duration": "45m",
+    "rating": 8.3,
+    "genres": ["Action", "Crime", "Mystery"],
+    "image": "/assets/money-heist.jpg",
+    "banner": "/assets/money-heist-banner.jpg"
+  },
+  {
+    "id": "8",
+    "title": "The Witcher",
+    "description": "A mutated monster-hunter struggles to find his place in a world where people often prove more wicked than beasts.",
+    "year": 2019,
+    "duration": "60m",
+    "rating": 8.2,
+    "genres": ["Action", "Adventure", "Drama"],
+    "image": "/assets/witcher.jpg",
+    "banner": "/assets/witcher-banner.jpg"
+  },
+  {
+    "id": "9",
+    "title": "Dark",
+    "description": "A family saga with a supernatural twist, set in a German town where the disappearance of two young children exposes the relationships among four families.",
+    "year": 2017,
+    "duration": "53m",
+    "rating": 8.8,
+    "genres": ["Crime", "Drama", "Mystery"],
+    "image": "/assets/dark.jpg",
+    "banner": "/assets/dark-banner.jpg"
+  },
+  {
+    "id": "10",
+    "title": "Friends",
+    "description": "Follows the personal and professional lives of six twenty to thirty-something-year-old friends living in Manhattan.",
+    "year": 1994,
+    "duration": "22m",
+    "rating": 8.9,
+    "genres": ["Comedy", "Romance"],
+    "image": "/assets/friends.jpg",
+    "banner": "/assets/friends-banner.jpg"
+  }
+] 
