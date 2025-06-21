@@ -6,14 +6,14 @@ import Logo from './Logo';
 import Navigation from './Navigation';
 import MoodDropdown from './MoodDropdown';
 
-const Navbar = ({ onMoodSubmit, onSearchResults }) => {
+const Navbar = ({ onMoodSubmit, onSearchResults, playlists, onDeletePlaylist }) => {
   const [showMoodDropdown, setShowMoodDropdown] = useState(false);
   const [moodInput, setMoodInput] = useState('');
   const [loading, setLoading] = useState(false);
   const [showSearchBar, setShowSearchBar] = useState(false);
   const [searchInput, setSearchInput] = useState('');
   
-  const dropdownRef = useRef(null);
+  const moodDropdownRef = useRef(null);
   const heartBtnRef = useRef(null);
   const searchBtnRef = useRef(null);
   const searchBarRef = useRef(null);
@@ -22,8 +22,8 @@ const Navbar = ({ onMoodSubmit, onSearchResults }) => {
   useEffect(() => {
     function handleClickOutside(event) {
       if (
-        dropdownRef.current &&
-        !dropdownRef.current.contains(event.target) &&
+        moodDropdownRef.current &&
+        !moodDropdownRef.current.contains(event.target) &&
         !heartBtnRef.current.contains(event.target)
       ) {
         setShowMoodDropdown(false);
@@ -101,7 +101,7 @@ const Navbar = ({ onMoodSubmit, onSearchResults }) => {
     <header className="sticky top-0 z-50 bg-black/95 backdrop-blur border-b border-gray-800">
       <div className="container mx-auto px-6 py-4 flex items-center justify-between relative">
         <Logo />
-        <Navigation />
+        <Navigation playlists={playlists} onDeletePlaylist={onDeletePlaylist} />
         
         <div className="flex items-center gap-4 relative">
           <button
@@ -123,7 +123,7 @@ const Navbar = ({ onMoodSubmit, onSearchResults }) => {
             onSubmit={handleSubmit}
             onMoodBtn={handleMoodBtn}
             onClose={() => { setShowMoodDropdown(false); setMoodInput(''); setLoading(false); }}
-            dropdownRef={dropdownRef}
+            dropdownRef={moodDropdownRef}
           />
           
           <button

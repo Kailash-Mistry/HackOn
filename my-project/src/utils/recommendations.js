@@ -53,7 +53,9 @@ export const detectMoodBERT = async (text) => {
       return result.mood;
     }
   } catch (error) {
-    console.log('BERT model not available, using keyword fallback');
+    console.warn(
+      'Could not connect to the BERT model. This is expected if the local AI server is not running. Falling back to keyword-based recommendations.'
+    );
   }
   
   // Fallback to keyword-based detection

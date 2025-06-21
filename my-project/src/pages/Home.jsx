@@ -8,8 +8,9 @@ import ContinueWatchingSection from '../sections/ContinueWatchingSection';
 import MoodRecommendations from '../components/MoodRecommendations';
 import SearchResults from '../components/SearchResults';
 import TimeContextDisplay from '../components/TimeContextDisplay';
+import WatchlistSection from '../sections/WatchlistSection';
 
-const Home = ({ moodInput, detectedMood, searchResults, searchQuery, onCloseSearch, searchLoading, searchError }) => {
+const Home = ({ moodInput, detectedMood, searchResults, searchQuery, onCloseSearch, searchLoading, searchError, playlists }) => {
   if (searchResults !== null) {
     return (
       <SearchResults 
@@ -42,6 +43,7 @@ const Home = ({ moodInput, detectedMood, searchResults, searchQuery, onCloseSear
         <TimeContextDisplay />
       </div>
       <ContinueWatchingSection />
+      <WatchlistSection playlists={playlists} />
       <TrendingSection />
       <RecommendedSection />
       {/* <WatchHistorySection /> */}
