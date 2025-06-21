@@ -16,7 +16,6 @@ const ContinueWatchingSection = () => {
   return (
     <section className="mb-12">
       <div className="flex items-center gap-3 mb-4">
-        <span className="p-2 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg text-2xl">⏩</span>
         <h2 className="text-2xl md:text-3xl font-bold text-white">Continue Watching</h2>
       </div>
       <ShowCarousel shows={shows} hideScrollbar={true} />

@@ -7,6 +7,7 @@
     "duration": "50m",
     "rating": 8.7,
     "genres": ["Sci-Fi", "Horror", "Drama"],
+    "moods": ["curiosity", "fear", "excitement"],
     "image": "/assets/stranger-things.jpg",
     "banner": "/assets/stranger-things-banner.jpg"
   },
@@ -18,6 +19,7 @@
     "duration": "1h 0m",
     "rating": 8.6,
     "genres": ["Drama", "Biography", "History"],
+    "moods": ["pride", "admiration", "sadness"],
     "image": "/assets/the-crown.jpg",
     "banner": "/assets/the-crown-banner.jpg"
   },
@@ -29,6 +31,7 @@
     "duration": "35m",
     "rating": 8.0,
     "genres": ["Sci-Fi", "Comedy", "Drama"],
+    "moods": ["amusement", "curiosity", "confusion"],
     "image": "/assets/wandavision.jpg",
     "banner": "/assets/wandavision-banner.jpg"
   },
@@ -40,6 +43,7 @@
     "duration": "50m",
     "rating": 8.7,
     "genres": ["Comedy", "Drama"],
+    "moods": ["joy", "pride", "amusement"],
     "image": "/assets/mrs-maisel.jpg",
     "banner": "/assets/mrs-maisel-banner.jpg"
   },
@@ -51,6 +55,7 @@
     "duration": "47m",
     "rating": 9.5,
     "genres": ["Crime", "Drama", "Thriller"],
+    "moods": ["fear", "remorse", "pride"],
     "image": "/assets/breaking-bad.jpg",
     "banner": "/assets/breaking-bad-banner.jpg"
   },
@@ -62,6 +67,7 @@
     "duration": "40m",
     "rating": 8.8,
     "genres": ["Action", "Adventure", "Sci-Fi"],
+    "moods": ["excitement", "curiosity", "caring"],
     "image": "/assets/mandalorian.jpg",
     "banner": "/assets/mandalorian-banner.jpg"
   },
@@ -73,6 +79,7 @@
     "duration": "45m",
     "rating": 8.3,
     "genres": ["Action", "Crime", "Mystery"],
+    "moods": ["excitement", "curiosity", "fear"],
     "image": "/assets/money-heist.jpg",
     "banner": "/assets/money-heist-banner.jpg"
   },
@@ -84,6 +91,7 @@
     "duration": "60m",
     "rating": 8.2,
     "genres": ["Action", "Adventure", "Drama"],
+    "moods": ["fear", "curiosity", "excitement"],
     "image": "/assets/witcher.jpg",
     "banner": "/assets/witcher-banner.jpg"
   },
@@ -95,6 +103,7 @@
     "duration": "53m",
     "rating": 8.8,
     "genres": ["Crime", "Drama", "Mystery"],
+    "moods": ["curiosity", "fear", "sadness"],
     "image": "/assets/dark.jpg",
     "banner": "/assets/dark-banner.jpg"
   },
@@ -106,7 +115,128 @@
     "duration": "22m",
     "rating": 8.9,
     "genres": ["Comedy", "Romance"],
+    "moods": ["joy", "love", "amusement"],
     "image": "/assets/friends.jpg",
     "banner": "/assets/friends-banner.jpg"
+  },
+  {
+    "id": "11",
+    "title": "Inside Out",
+    "description": "After young Riley is uprooted from her Midwest life, her emotions conflict on how best to navigate a new city.",
+    "year": 2015,
+    "duration": "1h 35m",
+    "rating": 8.1,
+    "genres": ["Animation", "Comedy", "Family"],
+    "moods": ["joy", "sadness", "surprise"],
+    "image": "/assets/inside-out.jpg",
+    "banner": "/assets/inside-out-banner.jpg"
+  },
+  {
+    "id": "12",
+    "title": "The Pursuit of Happyness",
+    "description": "A struggling salesman takes custody of his son as he's poised to begin a life-changing professional career.",
+    "year": 2006,
+    "duration": "1h 57m",
+    "rating": 8.0,
+    "genres": ["Biography", "Drama"],
+    "moods": ["optimism", "joy", "pride"],
+    "image": "/assets/pursuit-happyness.jpg",
+    "banner": "/assets/pursuit-happyness-banner.jpg"
+  },
+  {
+    "id": "13",
+    "title": "Joker",
+    "description": "A mentally troubled stand-up comedian embarks on a downward spiral that leads to the creation of an iconic villain.",
+    "year": 2019,
+    "duration": "2h 2m",
+    "rating": 8.4,
+    "genres": ["Crime", "Drama", "Thriller"],
+    "moods": ["anger", "sadness", "remorse"],
+    "image": "/assets/joker.jpg",
+    "banner": "/assets/joker-banner.jpg"
+  },
+  {
+    "id": "14",
+    "title": "La La Land",
+    "description": "While navigating their careers in Los Angeles, a pianist and an actress fall in love while attempting to reconcile their aspirations.",
+    "year": 2016,
+    "duration": "2h 8m",
+    "rating": 8.0,
+    "genres": ["Comedy", "Drama", "Music", "Romance"],
+    "moods": ["love", "joy", "sadness"],
+    "image": "/assets/la-la-land.jpg",
+    "banner": "/assets/la-la-land-banner.jpg"
+  },
+  {
+    "id": "15",
+    "title": "The Office",
+    "description": "A mockumentary on a group of typical office workers, where the workday consists of ego clashes, inappropriate behavior, and tedium.",
+    "year": 2005,
+    "duration": "22m",
+    "rating": 8.9,
+    "genres": ["Comedy"],
+    "moods": ["amusement", "joy"],
+    "image": "/assets/the-office.jpg",
+    "banner": "/assets/the-office-banner.jpg"
+  },
+  {
+    "id": "16",
+    "title": "Coco",
+    "description": "Aspiring musician Miguel, confronted with his family's ancestral ban on music, enters the Land of the Dead to find his great-great-grandfather.",
+    "year": 2017,
+    "duration": "1h 45m",
+    "rating": 8.4,
+    "genres": ["Animation", "Adventure", "Family"],
+    "moods": ["gratitude", "joy", "sadness"],
+    "image": "/assets/coco.jpg",
+    "banner": "/assets/coco-banner.jpg"
+  },
+  {
+    "id": "17",
+    "title": "The Shawshank Redemption",
+    "description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+    "year": 1994,
+    "duration": "2h 22m",
+    "rating": 9.3,
+    "genres": ["Drama"],
+    "moods": ["relief", "optimism", "pride"],
+    "image": "/assets/shawshank.jpg",
+    "banner": "/assets/shawshank-banner.jpg"
+  },
+  {
+    "id": "18",
+    "title": "Forrest Gump",
+    "description": "The presidencies of Kennedy and Johnson, the Vietnam War, and more through the eyes of an Alabama man with a low IQ.",
+    "year": 1994,
+    "duration": "2h 22m",
+    "rating": 8.8,
+    "genres": ["Drama", "Romance"],
+    "moods": ["love", "joy", "sadness", "pride"],
+    "image": "/assets/forrest-gump.jpg",
+    "banner": "/assets/forrest-gump-banner.jpg"
+  },
+  {
+    "id": "19",
+    "title": "Avengers: Endgame",
+    "description": "After the devastating events of Infinity War, the Avengers assemble once more to reverse Thanos' actions and restore balance.",
+    "year": 2019,
+    "duration": "3h 1m",
+    "rating": 8.4,
+    "genres": ["Action", "Adventure", "Drama"],
+    "moods": ["excitement", "pride", "sadness", "surprise"],
+    "image": "/assets/endgame.jpg",
+    "banner": "/assets/endgame-banner.jpg"
+  },
+  {
+    "id": "20",
+    "title": "Up",
+    "description": "78-year-old Carl sets out to fulfill his dream to see the wilds of South America, and meets an unexpected companion.",
+    "year": 2009,
+    "duration": "1h 36m",
+    "rating": 8.3,
+    "genres": ["Animation", "Adventure", "Comedy"],
+    "moods": ["joy", "sadness", "surprise"],
+    "image": "/assets/up.jpg",
+    "banner": "/assets/up-banner.jpg"
   }
 ] 

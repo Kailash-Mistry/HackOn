@@ -1,25 +1,52 @@
 import React from 'react';
-
-// Import the HeroBanner section (to be implemented next)
+import ContextualPlaylistsSection from '../sections/ContextualPlaylistsSection';
 import HeroBanner from '../sections/HeroBanner';
 import TrendingSection from '../sections/TrendingSection';
 // import WatchHistorySection from '../sections/WatchHistorySection';
 import RecommendedSection from '../sections/RecommendedSection';
 import ContinueWatchingSection from '../sections/ContinueWatchingSection';
+import MoodRecommendations from '../components/MoodRecommendations';
+import SearchResults from '../components/SearchResults';
+import TimeContextDisplay from '../components/TimeContextDisplay';
 
-const Home = () => {
+const Home = ({ moodInput, detectedMood, searchResults, searchQuery, onCloseSearch, searchLoading, searchError }) => {
+  if (searchResults !== null) {
+    return (
+      <SearchResults 
+        searchResults={searchResults} 
+        searchQuery={searchQuery} 
+        onCloseSearch={onCloseSearch}
+        isLoading={searchLoading}
+        error={searchError}
+      />
+    );
+  }
+  
+  if (detectedMood) {
+    return (
+      <div className="min-h-screen bg-black text-white">
+        <div className="w-full max-w-7xl mx-auto px-4 pt-8">
+          <h2 className="text-3xl font-bold flex items-center gap-2 mb-6">
+            Recommendations for detected mood - <span className="capitalize text-orange-400 ml-2">{detectedMood}</span>
+          </h2>
+          <MoodRecommendations mood={detectedMood} input={moodInput} fullPage={true} hideHeader />
+        </div>
+      </div>
+    );
+  }
+  
   return (
     <div className="min-h-screen bg-black text-white">
-      {/* Navbar (to be added as a component) */}
-      {/* <Navbar /> */}
-
-      {/* Hero Banner / Featured Show */}
       <HeroBanner />
+      <div className="w-full max-w-7xl mx-auto px-4">
+        <TimeContextDisplay />
+      </div>
       <ContinueWatchingSection />
       <TrendingSection />
       <RecommendedSection />
       {/* <WatchHistorySection /> */}
       {/* Other sections (Trending, Watch History, etc.) will go here */}
+      <ContextualPlaylistsSection />
     </div>
   );
 };

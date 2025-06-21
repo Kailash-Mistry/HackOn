@@ -16,11 +16,11 @@ const ShowCarousel = ({ shows, hideScrollbar }) => {
   return (
     <div className="relative">
       <div
-        className={`flex gap-8 overflow-x-auto pb-4 ${hideScrollbar ? 'hide-scrollbar' : 'scrollbar-hide'}`}
+        className={`flex gap-4 overflow-x-auto pb-4 ${hideScrollbar ? 'hide-scrollbar' : 'scrollbar-hide'}`}
         ref={scrollRef}
       >
         {shows.map((show) => (
-          <div key={show.id} className="flex-shrink-0 w-80">
+          <div key={show.id} className="flex-shrink-0 w-72">
             <ShowCard show={show} />
           </div>
         ))}

@@ -5,7 +5,7 @@ const ShowCard = ({ show }) => {
   const navigate = useNavigate();
   return (
     <div
-      className="bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer border border-gray-800 hover:border-orange-500/50 flex flex-col"
+      className="w-[18rem] h-[22rem] bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer border border-gray-800 hover:border-orange-500/50 flex flex-col"
       onClick={() => navigate(`/show/${show.id}`)}
     >
       <div className="aspect-[16/9] relative overflow-hidden">
