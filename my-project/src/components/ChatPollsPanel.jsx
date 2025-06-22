@@ -77,9 +77,44 @@ const ChatPollsPanel = ({ onCollapse, participants, chatMessages, notificationsO
           </div>
         )}
         {activeTab === 'Polls' && (
-          <div>
-            <p className="text-gray-400">Polls coming soon!</p>
-            {/* Placeholder for future polls */}
+          <div className="bg-white text-gray-800 rounded-lg p-6 shadow-md w-full max-w-sm mx-auto">
+            <h3 className="text-xl font-semibold mb-4 text-center text-gray-700">What do you wanna do?</h3>
+            <div className="space-y-3">
+              {/* Option 1: Continue */}
+              <div className="border border-purple-300 rounded-lg p-3 relative">
+                <div 
+                  className="absolute top-0 left-0 h-full bg-purple-200 rounded-lg"
+                  style={{ width: '50%' }}
+                ></div>
+                <div className="relative flex justify-between items-center">
+                  <span className="font-semibold text-purple-800">50%</span>
+                  <span className="text-gray-700">Continue</span>
+                </div>
+              </div>
+              {/* Option 2: Replay */}
+              <div className="border border-purple-300 rounded-lg p-3 relative">
+                <div 
+                  className="absolute top-0 left-0 h-full bg-purple-200 rounded-lg"
+                  style={{ width: '50%' }}
+                ></div>
+                <div className="relative flex justify-between items-center">
+                  <span className="font-semibold text-purple-800">50%</span>
+                  <span className="text-gray-700">Replay ✓</span>
+                </div>
+              </div>
+              {/* Option 3: Skip */}
+              <div className="border border-purple-300 rounded-lg p-3 relative">
+                <div 
+                  className="absolute top-0 left-0 h-full bg-purple-200 rounded-lg"
+                  style={{ width: '0%' }}
+                ></div>
+                <div className="relative flex justify-between items-center">
+                  <span className="font-semibold text-purple-800">0%</span>
+                  <span className="text-gray-700">Skip</span>
+                </div>
+              </div>
+            </div>
+            <p className="text-center text-gray-500 text-sm mt-4">Voted by Malti and John</p>
           </div>
         )}
         {activeTab === 'Participants' && (

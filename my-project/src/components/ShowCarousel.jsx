@@ -20,7 +20,7 @@ const ShowCarousel = ({ shows, hideScrollbar }) => {
         ref={scrollRef}
       >
         {shows.map((show) => (
-          <div key={show.id} className="flex-shrink-0 w-72">
+          <div key={show.id} className="flex-shrink-0 w-64">
             <ShowCard show={show} />
           </div>
         ))}

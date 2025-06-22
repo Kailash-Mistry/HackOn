@@ -8,8 +8,8 @@
     "rating": 8.7,
     "genres": ["Sci-Fi", "Horror", "Drama"],
     "moods": ["curiosity", "fear", "excitement"],
-    "image": "/assets/stranger-things.jpg",
-    "banner": "/assets/stranger-things-banner.jpg"
+    "image": "/assets/stranger-things.jpeg",
+    "banner": "/assets/stranger-things.jpeg"
   },
   {
     "id": "2",
@@ -21,7 +21,7 @@
     "genres": ["Drama", "Biography", "History"],
     "moods": ["pride", "admiration", "sadness"],
     "image": "/assets/the-crown.jpg",
-    "banner": "/assets/the-crown-banner.jpg"
+    "banner": "/assets/the-crown-.jpg"
   },
   {
     "id": "3",
@@ -33,7 +33,7 @@
     "genres": ["Sci-Fi", "Comedy", "Drama"],
     "moods": ["amusement", "curiosity", "confusion"],
     "image": "/assets/wandavision.jpg",
-    "banner": "/assets/wandavision-banner.jpg"
+    "banner": "/assets/wandavision.jpg"
   },
   {
     "id": "4",
@@ -45,7 +45,7 @@
     "genres": ["Comedy", "Drama"],
     "moods": ["joy", "pride", "amusement"],
     "image": "/assets/mrs-maisel.jpg",
-    "banner": "/assets/mrs-maisel-banner.jpg"
+    "banner": "/assets/mrs-maisel.jpg"
   },
   {
     "id": "5",
@@ -57,7 +57,7 @@
     "genres": ["Crime", "Drama", "Thriller"],
     "moods": ["fear", "remorse", "pride"],
     "image": "/assets/breaking-bad.jpg",
-    "banner": "/assets/breaking-bad-banner.jpg"
+    "banner": "/assets/breaking-bad-.jpg"
   },
   {
     "id": "6",
@@ -69,7 +69,7 @@
     "genres": ["Action", "Adventure", "Sci-Fi"],
     "moods": ["excitement", "curiosity", "caring"],
     "image": "/assets/mandalorian.jpg",
-    "banner": "/assets/mandalorian-banner.jpg"
+    "banner": "/assets/mandalorian.jpg"
   },
   {
     "id": "7",
@@ -81,7 +81,7 @@
     "genres": ["Action", "Crime", "Mystery"],
     "moods": ["excitement", "curiosity", "fear"],
     "image": "/assets/money-heist.jpg",
-    "banner": "/assets/money-heist-banner.jpg"
+    "banner": "/assets/money-heist.jpg"
   },
   {
     "id": "8",
@@ -93,7 +93,7 @@
     "genres": ["Action", "Adventure", "Drama"],
     "moods": ["fear", "curiosity", "excitement"],
     "image": "/assets/witcher.jpg",
-    "banner": "/assets/witcher-banner.jpg"
+    "banner": "/assets/witcher.jpg"
   },
   {
     "id": "9",
@@ -105,7 +105,7 @@
     "genres": ["Crime", "Drama", "Mystery"],
     "moods": ["curiosity", "fear", "sadness"],
     "image": "/assets/dark.jpg",
-    "banner": "/assets/dark-banner.jpg"
+    "banner": "/assets/dark.jpg"
   },
   {
     "id": "10",
@@ -117,7 +117,7 @@
     "genres": ["Comedy", "Romance"],
     "moods": ["joy", "love", "amusement"],
     "image": "/assets/friends.jpg",
-    "banner": "/assets/friends-banner.jpg"
+    "banner": "/assets/friends.jpg"
   },
   {
     "id": "11",
@@ -129,7 +129,7 @@
     "genres": ["Animation", "Comedy", "Family"],
     "moods": ["joy", "sadness", "surprise"],
     "image": "/assets/inside-out.jpg",
-    "banner": "/assets/inside-out-banner.jpg"
+    "banner": "/assets/inside-out.jpg"
   },
   {
     "id": "12",
@@ -141,7 +141,7 @@
     "genres": ["Biography", "Drama"],
     "moods": ["optimism", "joy", "pride"],
     "image": "/assets/pursuit-happyness.jpg",
-    "banner": "/assets/pursuit-happyness-banner.jpg"
+    "banner": "/assets/pursuit-happyness.jpg"
   },
   {
     "id": "13",
@@ -153,7 +153,7 @@
     "genres": ["Crime", "Drama", "Thriller"],
     "moods": ["anger", "sadness", "remorse"],
     "image": "/assets/joker.jpg",
-    "banner": "/assets/joker-banner.jpg"
+    "banner": "/assets/joker.jpg"
   },
   {
     "id": "14",
@@ -165,7 +165,7 @@
     "genres": ["Comedy", "Drama", "Music", "Romance"],
     "moods": ["love", "joy", "sadness"],
     "image": "/assets/la-la-land.jpg",
-    "banner": "/assets/la-la-land-banner.jpg"
+    "banner": "/assets/la-la-land.jpg"
   },
   {
     "id": "15",
@@ -176,8 +176,8 @@
     "rating": 8.9,
     "genres": ["Comedy"],
     "moods": ["amusement", "joy"],
-    "image": "/assets/the-office.jpg",
-    "banner": "/assets/the-office-banner.jpg"
+    "image": "/assets/the-office.jpeg",
+    "banner": "/assets/the-office.jpeg"
   },
   {
     "id": "16",
@@ -189,7 +189,7 @@
     "genres": ["Animation", "Adventure", "Family"],
     "moods": ["gratitude", "joy", "sadness"],
     "image": "/assets/coco.jpg",
-    "banner": "/assets/coco-banner.jpg"
+    "banner": "/assets/coco.jpg"
   },
   {
     "id": "17",
@@ -201,7 +201,7 @@
     "genres": ["Drama"],
     "moods": ["relief", "optimism", "pride"],
     "image": "/assets/shawshank.jpg",
-    "banner": "/assets/shawshank-banner.jpg"
+    "banner": "/assets/shawshank.jpg"
   },
   {
     "id": "18",
@@ -213,7 +213,7 @@
     "genres": ["Drama", "Romance"],
     "moods": ["love", "joy", "sadness", "pride"],
     "image": "/assets/forrest-gump.jpg",
-    "banner": "/assets/forrest-gump-banner.jpg"
+    "banner": "/assets/forrest-gump.jpg"
   },
   {
     "id": "19",
@@ -225,7 +225,7 @@
     "genres": ["Action", "Adventure", "Drama"],
     "moods": ["excitement", "pride", "sadness", "surprise"],
     "image": "/assets/endgame.jpg",
-    "banner": "/assets/endgame-banner.jpg"
+    "banner": "/assets/endgame.jpg"
   },
   {
     "id": "20",
@@ -237,6 +237,6 @@
     "genres": ["Animation", "Adventure", "Comedy"],
     "moods": ["joy", "sadness", "surprise"],
     "image": "/assets/up.jpg",
-    "banner": "/assets/up-banner.jpg"
+    "banner": "/assets/up.jpg"
   }
 ] 

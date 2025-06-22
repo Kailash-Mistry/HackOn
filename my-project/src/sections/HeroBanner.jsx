@@ -7,7 +7,7 @@ const VIDEO_SRC = "http://commondatastorage.googleapis.com/gtv-videos-bucket/sam
 const HeroBanner = () => {
   const [showPlayer, setShowPlayer] = useState(false);
 
-  // Placeholder data (replace with JSON data access soon)
+
   const featured = {
     id: 'stranger-things', // Added for navigation
     title: 'Stranger Things',
@@ -16,7 +16,7 @@ const HeroBanner = () => {
     duration: '50m',
     rating: 8.7,
     genres: ['Sci-Fi', 'Horror', 'Drama'],
-    image: '/assets/stranger-things-banner.jpg', // Place a sample image in public/assets
+    image: '/assets/stranger-things.jpg',
   };
 
   return (

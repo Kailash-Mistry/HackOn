@@ -24,25 +24,16 @@ const ContextMenu = ({ x, y, playlist, onClose, onDelete }) => {
       className="absolute z-[100] w-44 bg-gray-900 rounded-md shadow-2xl border border-gray-700 p-1"
       style={{ top: y, left: x }}
     >
-      <button className="w-full text-left px-3 py-2 text-sm text-gray-200 rounded-md hover:bg-orange-500 transition-colors">
-        Share
-      </button>
-      <button className="w-full text-left px-3 py-2 text-sm text-gray-200 rounded-md hover:bg-orange-500 transition-colors">
-        Copy Link
-      </button>
       {canBeDeleted && (
-        <>
-          <div className="h-px bg-gray-700 my-1" />
-          <button
-            onClick={() => {
-              onDelete(playlist.id);
-              onClose();
-            }}
-            className="w-full text-left px-3 py-2 text-sm text-red-400 rounded-md hover:bg-red-500 hover:text-white transition-colors"
-          >
-            Delete
-          </button>
-        </>
+        <button
+          onClick={() => {
+            onDelete(playlist.id);
+            onClose();
+          }}
+          className="w-full text-left px-3 py-2 text-sm text-red-400 rounded-md hover:bg-red-500 hover:text-white transition-colors"
+        >
+          Delete
+        </button>
       )}
     </div>
   );

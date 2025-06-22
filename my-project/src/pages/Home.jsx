@@ -2,13 +2,13 @@ import React from 'react';
 import ContextualPlaylistsSection from '../sections/ContextualPlaylistsSection';
 import HeroBanner from '../sections/HeroBanner';
 import TrendingSection from '../sections/TrendingSection';
-// import WatchHistorySection from '../sections/WatchHistorySection';
 import RecommendedSection from '../sections/RecommendedSection';
 import ContinueWatchingSection from '../sections/ContinueWatchingSection';
 import MoodRecommendations from '../components/MoodRecommendations';
 import SearchResults from '../components/SearchResults';
 import TimeContextDisplay from '../components/TimeContextDisplay';
 import WatchlistSection from '../sections/WatchlistSection';
+import FriendsPicksSection from '../sections/FriendsPicksSection';
 
 const Home = ({ moodInput, detectedMood, searchResults, searchQuery, onCloseSearch, searchLoading, searchError, playlists }) => {
   if (searchResults !== null) {
@@ -46,8 +46,7 @@ const Home = ({ moodInput, detectedMood, searchResults, searchQuery, onCloseSear
       <WatchlistSection playlists={playlists} />
       <TrendingSection />
       <RecommendedSection />
-      {/* <WatchHistorySection /> */}
-      {/* Other sections (Trending, Watch History, etc.) will go here */}
+      <FriendsPicksSection />
       <ContextualPlaylistsSection />
     </div>
   );

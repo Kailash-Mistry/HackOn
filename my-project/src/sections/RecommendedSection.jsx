@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import ShowCard from '../components/ShowCard';
+import ShowCarousel from '../components/ShowCarousel';
 
 const RecommendedSection = () => {
   const [shows, setShows] = useState([]);
@@ -19,13 +19,7 @@ const RecommendedSection = () => {
         {/* <span className="p-2 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg text-2xl">✨</span> */}
         <h2 className="text-2xl md:text-3xl font-bold text-white">Recommended for You</h2>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-1 pl-4">
-        {shows.map((show) => (
-          <div key={show.id} className="min-w-[18rem] h-full flex">
-            <ShowCard show={show} />
-          </div>
-        ))}
-      </div>
+      <ShowCarousel shows={shows} hideScrollbar={true} />
     </section>
   );
 };
