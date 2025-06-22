@@ -7,6 +7,7 @@ import ShowDetails from './pages/ShowDetails';
 import PlaylistPage from './pages/PlaylistPage';
 import Movies from './pages/Movies';
 import TvShows from './pages/TvShows';
+import WatchParty from './pages/WatchParty';
 import { v4 as uuidv4 } from 'uuid';
 
 const App = () => {
@@ -107,16 +108,16 @@ const App = () => {
   };
 
   return (
-    <BrowserRouter>
-      <div className="flex flex-col min-h-screen bg-black">
+  <BrowserRouter>
+    <div className="flex flex-col min-h-screen bg-black">
         <Navbar 
           onMoodSubmit={handleMoodSubmit} 
           onSearchResults={handleSearchResults}
           playlists={playlists} 
           onDeletePlaylist={handleDeletePlaylist}
         />
-        <main className="flex-1">
-          <Routes>
+      <main className="flex-1">
+        <Routes>
             <Route path="/" element={
               <Home 
                 moodInput={moodInput} 
@@ -142,12 +143,13 @@ const App = () => {
             />
             <Route path="/movies" element={<Movies />} />
             <Route path="/tv-shows" element={<TvShows />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </BrowserRouter>
-  );
+            <Route path="/watch-party/:roomId" element={<WatchParty />} />
+        </Routes>
+      </main>
+      <Footer />
+    </div>
+  </BrowserRouter>
+);
 };
 
 export default App;

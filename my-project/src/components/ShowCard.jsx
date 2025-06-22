@@ -6,31 +6,15 @@ const ShowCard = ({ show }) => {
 
   return (
     <div
-      className="w-full bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer border border-gray-800 hover:border-orange-500/50 flex flex-col"
+      className="w-[20rem] h-[30rem] bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer border border-gray-800 hover:border-orange-500/50 flex flex-col"
       onClick={() => navigate(`/show/${show.id}`)}
-      style={{ width: '18rem', height: '22rem' }}
     >
-      <div className="aspect-[16/9] relative overflow-hidden">
+      <div className="w-full h-full relative overflow-hidden">
         <img
-          src={show.image || show.thumbnail}
+          src="/assets/stranger-things.jpg"
           alt={show.title}
           className="w-full h-full object-cover"
         />
-        <div className="absolute top-2 left-2 bg-black/70 text-yellow-400 px-2 py-1 rounded-full text-xs font-bold flex items-center gap-1">
-          <span>★</span>
-          <span>{show.rating}</span>
-        </div>
-      </div>
-      <div className="p-4 flex-1 flex flex-col">
-        <h3 className="font-bold text-white text-lg mb-1 line-clamp-1">{show.title}</h3>
-        <p className="text-gray-400 text-sm mb-2 line-clamp-2 flex-1">{show.description}</p>
-        <div className="flex flex-wrap gap-1 mt-2">
-          {show.genres.map((g) => (
-            <span key={g} className="px-2 py-1 bg-gray-800 text-gray-300 rounded-full text-xs border border-gray-700">
-              {g}
-            </span>
-          ))}
-        </div>
       </div>
     </div>
   );

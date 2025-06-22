@@ -11,7 +11,6 @@ const AddToStoriesModal = ({ isOpen, onClose, timestamp, onSubmit }) => {
     onClose();
   };
   
-  // Format timestamp from seconds to MM:SS
   const formatTime = (timeInSeconds) => {
     const minutes = Math.floor(timeInSeconds / 60);
     const seconds = Math.floor(timeInSeconds % 60);
@@ -66,7 +65,6 @@ const AddToStoriesModal = ({ isOpen, onClose, timestamp, onSubmit }) => {
   );
 };
 
-
 const VideoPlayer = ({ src, onClose }) => {
   const videoRef = useRef(null);
   const [isStoriesModalOpen, setStoriesModalOpen] = useState(false);
@@ -88,7 +86,7 @@ const VideoPlayer = ({ src, onClose }) => {
   // Effect to auto-play on mount
   useEffect(() => {
     if (videoRef.current) {
-      videoRef.current.play();
+      videoRef.current.play().catch(error => console.warn("Autoplay prevented:", error));
     }
   }, []);
 
@@ -101,12 +99,11 @@ const VideoPlayer = ({ src, onClose }) => {
   };
 
   const handleStorySubmit = (storyData) => {
-    console.log("Story data:", storyData); // You can handle the data here
+    console.log("Story data:", storyData);
     setStoriesModalOpen(false);
     setShowConfirmation(true);
     setTimeout(() => {
       setShowConfirmation(false);
-      // No longer resuming video automatically
     }, 2000);
   };
 
