@@ -144,7 +144,7 @@ const ShowDetails = ({ playlists, onPlaylistManagement }) => {
               <span className="font-semibold text-gray-200"></span> Your activity won't appear on your profile or be shared with friends.
             </li>
             <li>
-              <span className="font-semibold text-gray-200">:</span> Your viewing won't affect your personalized recommendations.
+              <span className="font-semibold text-gray-200"></span> Your viewing won't affect your personalized recommendations.
             </li>
             <li>
               <span className="font-semibold text-gray-200"></span> Content you watch will be hidden from your public history.
