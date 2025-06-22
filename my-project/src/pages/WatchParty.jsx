@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, useLocation, useNavigate } from 'react-router-dom';
 import EmbeddedVideoPlayer from '../components/EmbeddedVideoPlayer';
 import ChatPollsPanel from '../components/ChatPollsPanel';
+import Notification from '../components/Notification';
 
 const VIDEO_SRC = "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4";
 
@@ -11,12 +12,56 @@ const WatchParty = () => {
   const navigate = useNavigate();
   const { show } = location.state || {};
   const [isPanelCollapsed, setIsPanelCollapsed] = useState(false);
+  const [notifications, setNotifications] = useState([]);
+  const [participants, setParticipants] = useState([]);
+  const [chatMessages, setChatMessages] = useState([]);
+
+  useEffect(() => {
+    const notificationTimer1 = setTimeout(() => {
+      addNotification('Malti has joined the room');
+    }, 10000); // 10 seconds
+
+    const notificationTimer2 = setTimeout(() => {
+      addNotification('John has joined the room');
+    }, 15000); // 15 seconds
+
+    const chatTimer1 = setTimeout(() => {
+      addChatMessage({ user: 'Malti', text: 'Hey' });
+    }, 30000); // 30 seconds
+
+    const chatTimer2 = setTimeout(() => {
+      addChatMessage({ user: 'John', text: 'This is my favorite show!' });
+    }, 35000); // 35 seconds
+
+    return () => {
+      clearTimeout(notificationTimer1);
+      clearTimeout(notificationTimer2);
+      clearTimeout(chatTimer1);
+      clearTimeout(chatTimer2);
+    };
+  }, []);
 
   const handleShare = () => {
     const url = window.location.href;
     navigator.clipboard.writeText(url).then(() => {
       alert('Room link copied to clipboard!');
     });
+  };
+
+  const addNotification = (message) => {
+    const id = Date.now();
+    setNotifications(prev => [...prev, { id, message }]);
+
+    const name = message.split(' ')[0];
+    setParticipants(prev => [...prev, name]);
+  };
+
+  const addChatMessage = (message) => {
+    setChatMessages(prev => [...prev, message]);
+  };
+
+  const removeNotification = (id) => {
+    setNotifications(prev => prev.filter(n => n.id !== id));
   };
 
   if (!show) {
@@ -35,7 +80,17 @@ const WatchParty = () => {
   }
 
   return (
-    <div className="flex min-h-screen bg-black text-white p-4 lg:p-8 gap-8">
+    <div className="flex min-h-screen bg-black text-white p-4 lg:p-8 gap-8 relative">
+      {/* Notification Container */}
+      <div className="fixed top-24 right-8 z-50">
+        {notifications.map(notification => (
+          <Notification
+            key={notification.id}
+            message={notification.message}
+            onClose={() => removeNotification(notification.id)}
+          />
+        ))}
+      </div>
       {/* Left Column: Player and Room Info */}
       <div className={`flex-1 flex flex-col gap-6 transition-all duration-500 ${isPanelCollapsed ? 'w-full' : 'lg:w-[calc(100%-412px)]'}`}>
         <div className="aspect-video bg-black rounded-xl overflow-hidden shadow-2xl">
@@ -61,7 +116,11 @@ const WatchParty = () => {
       {/* Right Column: Chat and Polls */}
       <div className={`transition-all duration-500 ${isPanelCollapsed ? 'w-0' : 'w-full lg:w-[380px]'}`}>
         {!isPanelCollapsed && (
-          <ChatPollsPanel onCollapse={() => setIsPanelCollapsed(true)} />
+          <ChatPollsPanel 
+            onCollapse={() => setIsPanelCollapsed(true)} 
+            participants={participants}
+            chatMessages={chatMessages}
+          />
         )}
       </div>
 
