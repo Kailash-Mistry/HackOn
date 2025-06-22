@@ -12,9 +12,11 @@ const WatchParty = () => {
   const navigate = useNavigate();
   const { show } = location.state || {};
   const [isPanelCollapsed, setIsPanelCollapsed] = useState(false);
-  const [notifications, setNotifications] = useState([]);
+  const [joinNotifications, setJoinNotifications] = useState([]);
+  const [systemNotifications, setSystemNotifications] = useState([]);
   const [participants, setParticipants] = useState([]);
   const [chatMessages, setChatMessages] = useState([]);
+  const [notificationsOn, setNotificationsOn] = useState(true);
 
   useEffect(() => {
     const notificationTimer1 = setTimeout(() => {
@@ -48,20 +50,45 @@ const WatchParty = () => {
     });
   };
 
-  const addNotification = (message) => {
-    const id = Date.now();
-    setNotifications(prev => [...prev, { id, message }]);
+  const handleToggleNotifications = () => {
+    setNotificationsOn(prev => {
+      const newState = !prev;
+      if (!newState) {
+        addSystemNotification("Notifications turned Off");
+      } else {
+        addSystemNotification("Notifications turned On");
+      }
+      return newState;
+    });
+  };
 
-    const name = message.split(' ')[0];
-    setParticipants(prev => [...prev, name]);
+  const addSystemNotification = (message) => {
+    const id = Date.now();
+    setSystemNotifications([{ id, message, type: 'system' }]);
+  };
+
+  const addNotification = (message) => {
+    if (notificationsOn) {
+      const id = Date.now();
+      setJoinNotifications(prev => [...prev, { id, message, type: 'join' }]);
+    }
+    
+    if (message.includes(' has joined the room')) {
+      const name = message.split(' ')[0];
+      setParticipants(prev => [...prev, name]);
+    }
   };
 
   const addChatMessage = (message) => {
     setChatMessages(prev => [...prev, message]);
   };
 
-  const removeNotification = (id) => {
-    setNotifications(prev => prev.filter(n => n.id !== id));
+  const removeJoinNotification = (id) => {
+    setJoinNotifications(prev => prev.filter(n => n.id !== id));
+  };
+  
+  const removeSystemNotification = (id) => {
+    setSystemNotifications(prev => prev.filter(n => n.id !== id));
   };
 
   if (!show) {
@@ -83,11 +110,19 @@ const WatchParty = () => {
     <div className="flex min-h-screen bg-black text-white p-4 lg:p-8 gap-8 relative">
       {/* Notification Container */}
       <div className="fixed top-24 right-8 z-50">
-        {notifications.map(notification => (
+        {joinNotifications.map(notification => (
           <Notification
             key={notification.id}
             message={notification.message}
-            onClose={() => removeNotification(notification.id)}
+            onClose={() => removeJoinNotification(notification.id)}
+          />
+        ))}
+        {systemNotifications.map(notification => (
+          <Notification
+            key={notification.id}
+            message={notification.message}
+            onClose={() => removeSystemNotification(notification.id)}
+            duration={3000}
           />
         ))}
       </div>
@@ -120,6 +155,8 @@ const WatchParty = () => {
             onCollapse={() => setIsPanelCollapsed(true)} 
             participants={participants}
             chatMessages={chatMessages}
+            notificationsOn={notificationsOn}
+            onToggleNotifications={handleToggleNotifications}
           />
         )}
       </div>

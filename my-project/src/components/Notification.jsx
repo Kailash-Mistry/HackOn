@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-const Notification = ({ message, onClose }) => {
+const Notification = ({ message, onClose, duration = 4000 }) => {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -12,10 +12,10 @@ const Notification = ({ message, onClose }) => {
       setVisible(false);
       // Allow time for animation before calling onClose
       setTimeout(onClose, 300); 
-    }, 4000); // Display for 4 seconds
+    }, duration); // Display for 4 seconds
 
     return () => clearTimeout(timer);
-  }, [onClose]);
+  }, [onClose, duration]);
 
   return (
     <div

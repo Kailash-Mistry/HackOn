@@ -1,22 +1,40 @@
 import React, { useState } from 'react';
 
+
 const TABS = ['Chat', 'Polls', 'Participants'];
 
-const ChatPollsPanel = ({ onCollapse, participants, chatMessages }) => {
+const ChatPollsPanel = ({ onCollapse, participants, chatMessages, notificationsOn, onToggleNotifications }) => {
   const [activeTab, setActiveTab] = useState('Chat');
 
   return (
     <div className="bg-gray-900 border border-gray-800 rounded-2xl flex flex-col h-full relative">
-      {/* Collapse Button */}
-      <button 
-        onClick={onCollapse}
-        className="absolute top-2 right-2 bg-gray-700 hover:bg-gray-600 text-white p-2 rounded-full shadow-lg z-10"
-        title="Collapse Panel"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-        </svg>
-      </button>
+      {/* Header Buttons */}
+      <div className="absolute top-3 right-3 flex items-center gap-2 z-10">
+        <button
+          onClick={onToggleNotifications}
+          className="bg-gray-700 hover:bg-gray-600 text-white p-2 rounded-full shadow-lg transition-colors"
+          title={notificationsOn ? "Mute Notifications" : "Unmute Notifications"}
+        >
+          {notificationsOn ? (
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+            </svg>
+          ) : (
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341" />
+            </svg>
+          )}
+        </button>
+        <button 
+          onClick={onCollapse}
+          className="bg-gray-700 hover:bg-gray-600 text-white p-2 rounded-full shadow-lg"
+          title="Collapse Panel"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
 
       {/* Tabs */}
       <div className="flex-shrink-0 p-2 border-b border-gray-800">
